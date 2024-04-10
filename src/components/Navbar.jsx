@@ -7,8 +7,8 @@ import { logo, menu, close, logoAdj } from "../assets";
 
 const Navbar = () => {
   // function
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState(""); // page switch
+  const [toggle, setToggle] = useState(false); // toggle switch
 
   return (
     <nav
@@ -17,6 +17,7 @@ const Navbar = () => {
       `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+        {/* Icon & Title link */}
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -25,17 +26,15 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
           <p className=" text-white text-[18px] font-bold cursor-pointer">
-            Maximilian
-            <span className="sm:block hidden">| OverStack | Data Science</span>
+            Maximilian.r.Lok
+            <span className="sm:block hidden">| FullStack | Data Science</span>
           </p>
         </Link>
 
-        {/* de. non-dropdown-usage
-        <ul className=" list-none hidden sm:flex flex-row gap-10"> */}
-        {/* new dropdown usage */}
-        <ul className=" list-none hidden sm:flex flex-row gap-10">
+        {/* web dropdown wiout toggle */}
+        <ul className=" list-none hidden md:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -49,7 +48,9 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+
+        {/* Mobile drop with toggle */}
+        <div className="md:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -60,7 +61,26 @@ const Navbar = () => {
             className={`${!toggle ? "hidden" : "flex"}
             p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10 rounded-xl
           `}
-          ></div>
+          >
+            {/* drop toggle */}
+            <ul className=" list-none flex justify-end items-start flex-col gap-4">
+              {navLinks.map((link) => (
+                <li
+                  key={link.id}
+                  className={`
+              ${active === link.title ? "text-white" : "text-secondary"}
+               hover:text-white text-[18px] font-medium cursor-pointer
+              `} // active class switch
+                  onClick={() => {
+                    setActive(link.title); // page switch
+                    setToggle(!toggle); // close when hyper or switch
+                  }}
+                >
+                  <a href={`#${link.id}`}>{link.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

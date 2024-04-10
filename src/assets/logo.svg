@@ -3,17 +3,17 @@
   version="1.1"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns:svgjs="http://svgjs.dev/svgjs"
-  width="520"
-  height="520"
-  viewBox="0 0 520 520"
+  width="200"
+  height="225"
+  viewBox="0 0 200 225"
 >
   <g transform="matrix(1,0,0,1,3.410605131648481e-13,0)">
     <svg
       viewBox="0 0 320 360"
       data-background-color="#4c1212"
       preserveAspectRatio="xMidYMid meet"
-      height="520"
-      width="520"
+      height="225"
+      width="200"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
     >
