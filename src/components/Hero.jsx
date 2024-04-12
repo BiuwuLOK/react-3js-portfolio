@@ -27,10 +27,8 @@ const Hero = () => {
             <span className=" text-orange-400"> Maximilian.raku.Lok</span>
           </h1>
           <p className={`${styles.heroSubText} mt-4 text-white`}>
-            full stack developer, data process & database,
-            <br className="sm:block hidden" />
-            researcher of machine learning and statistics algo etc.
-            <Intro />
+            Working on
+            <Intro className={` text-violet-400`} />
           </p>
         </div>
       </div>

@@ -1,46 +1,46 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 
-const Intro = () => {
-  // sentence
-  const sentences = [
-    "I develop Web Applications,",
-    "Desktop Applications,",
-    "and User Interfaces",
-  ];
-  const [text, setText] = useState("");
-  const [index, setIndex] = useState(0);
-  const [typing, setTyping] = useState(true);
-  const [sentenceIndex, setSentenceIndex] = useState(0);
+const TypewriterEffect = () => {
+  const CURSOR_CLASS = "cursor";
+  const [textColor, setTextColor] = useState("LightSalmon");
 
-  useEffect(() => {
-    if (sentenceIndex < sentences.length) {
-      if (typing) {
-        if (index < sentences[sentenceIndex].length) {
-          setTimeout(() => {
-            setText((prev) => prev + sentences[sentenceIndex].charAt(index));
-            setIndex(index + 1);
-          }, 150);
-        } else {
-          setTimeout(() => setTyping(false), 1500);
-        }
-      } else {
-        if (index > 0) {
-          setTimeout(() => {
-            setText(sentences[sentenceIndex].substring(0, index - 1));
-            setIndex(index - 1);
-          }, 75);
-        } else {
-          setSentenceIndex(sentenceIndex + 1);
-          setTyping(true);
-        }
-      }
-    } else {
-      // Display the full text after the last sentence is typed
-      setText(sentences.join(" "));
-    }
-  }, [index, typing, sentenceIndex]);
-
-  return <div>Intro</div>;
+  return (
+    <span
+      style={{
+        whiteSpace: "pre-line",
+        display: "block",
+        minHeight: "200px",
+        color: textColor,
+        opacity: 0.92,
+      }}
+    >
+      <TypeAnimation
+        cursor={true}
+        sequence={[
+          211,
+          `over stack developer`,
+          720,
+          "",
+          () => setTextColor("#38bdf8"),
+          `include data process & database`,
+          720,
+          "",
+          () => setTextColor("#34d399"),
+          `researcher of machine learning and statistics algo etc.`,
+          720, // Pause after the last sentence is typed
+          "",
+          (e) => e.classList.add(CURSOR_CLASS),
+          () => setTextColor("#a78bfa"),
+          `over stack developer, \ninclude data process & database, \nresearcher of machine learning and statistics algo etc.`,
+          4444, // Pause after the full text is typed
+        ]}
+        speed={89} // Typing speed for characters
+        wrapper="span"
+        repeat={Infinity} // Repeat 0-99 / infinity, 0 as once
+      />
+    </span>
+  );
 };
 
-export default Intro;
+export default TypewriterEffect;
