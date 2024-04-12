@@ -1,8 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
-
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-// run `npm install --legacy-peer-deps three` if the 3d computer module broke
 
 import CanvasLoader from "../Loader";
 
@@ -12,15 +10,8 @@ const Computers = () => {
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="black" />
-
-      <pointLight intensity={10} />
-      {/* <spotLight position={[-20, 50, 10]} /> */}
-      <primitive
-        object={computer.scene}
-        scale={0.75}
-        position={[0, -3.25, -1.5]}
-        rotation={[-0.01, -0.2, -0.1]}
-      />
+      <pointLight intensity={1} />
+      <primitive object={computer.scene} />
     </mesh>
   );
 };
@@ -47,4 +38,4 @@ const ComputerCanvas = () => {
   );
 };
 
-export default ComputerCanvas; // Make sure to export ComputerCanvas
+export default ComputerCanvas; // Make sure to export ComputerCanvas instead of Computers

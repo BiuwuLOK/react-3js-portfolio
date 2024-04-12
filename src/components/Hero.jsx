@@ -2,6 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
+
+import Intro from "./Intro";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
@@ -25,15 +27,16 @@ const Hero = () => {
             <span className=" text-orange-400"> Maximilian.raku.Lok</span>
           </h1>
           <p className={`${styles.heroSubText} mt-4 text-white`}>
-            over stack developer, web or system,
+            full stack developer, data process & database,
             <br className="sm:block hidden" />
             researcher of machine learning and statistics algo etc.
+            <Intro />
           </p>
         </div>
       </div>
 
       {/* 3d computer module */}
-      <ComputersCanvas />
+      {/* <ComputersCanvas /> */}
     </section>
   );
 };
