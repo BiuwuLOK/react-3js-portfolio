@@ -20,22 +20,24 @@ const TypewriterEffect = () => {
         sequence={[
           211,
           `over stack developer`,
-          720,
+          900,
           "",
           () => setTextColor("#38bdf8"),
           `include data process & database`,
-          720,
+          900,
           "",
           () => setTextColor("#34d399"),
           `researcher of machine learning and statistics algo etc.`,
-          720, // Pause after the last sentence is typed
+          1200, // Pause after the last sentence is typed
           "",
           (e) => e.classList.add(CURSOR_CLASS),
           () => setTextColor("#a78bfa"),
           `over stack developer, \ninclude data process & database, \nresearcher of machine learning and statistics algo etc.`,
           4444, // Pause after the full text is typed
+          "",
+          210,
         ]}
-        speed={89} // Typing speed for characters
+        speed={81.616} // Typing speed for characters
         wrapper="span"
         repeat={Infinity} // Repeat 0-99 / infinity, 0 as once
       />
