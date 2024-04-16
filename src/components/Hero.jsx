@@ -27,7 +27,7 @@ const Hero = () => {
             <span className=" text-orange-400"> Maximilian.raku.Lok</span>
           </h1>
           <p className={`${styles.heroSubText} mt-4 text-white`}>
-            Working on
+            Working as
             <Intro className={` text-violet-400`} />
           </p>
         </div>
