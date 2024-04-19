@@ -6,7 +6,7 @@ import { navLinks } from "../constants";
 import { logo, menu, close, logoAdj } from "../assets";
 
 const Navbar = () => {
-  // function
+  // react useState func
   const [active, setActive] = useState(""); // page switch
   const [toggle, setToggle] = useState(false); // toggle switch
 
@@ -17,7 +17,7 @@ const Navbar = () => {
       `}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        {/* Icon & Title link */}
+        {/* left parts - Icon & Title */}
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -33,7 +33,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        {/* web dropdown wiout toggle */}
+        {/* end parts - for web - none toggle */}
         <ul className=" list-none hidden md:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
@@ -49,8 +49,9 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile drop with toggle */}
+        {/* end parts - for mobile - with toggle */}
         <div className="md:hidden flex flex-1 justify-end items-center">
+          {/* toggle */}
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -62,18 +63,18 @@ const Navbar = () => {
             p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10 rounded-xl
           `}
           >
-            {/* drop toggle */}
+            {/* dropdown links */}
             <ul className=" list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
                   className={`
-              ${active === link.title ? "text-white" : "text-secondary"}
-               hover:text-white text-[18px] font-medium cursor-pointer
-              `} // active class switch
+                  ${active === link.title ? "text-white" : "text-secondary"}
+                  hover:text-white text-[18px] font-medium cursor-pointer
+                  `} // active and switch class
                   onClick={() => {
                     setActive(link.title); // page switch
-                    setToggle(!toggle); // close when hyper or switch
+                    setToggle(!toggle); // re - toggle
                   }}
                 >
                   <a href={`#${link.id}`}>{link.title}</a>

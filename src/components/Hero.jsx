@@ -20,7 +20,7 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        {/* meme intro */}
+        {/* intro fixed content */}
         <div>
           <h1 className={`${styles.heroHeadText}`}>
             Hi, this is
@@ -34,7 +34,7 @@ const Hero = () => {
       </div>
 
       {/* 3d computer module */}
-      {/* <ComputersCanvas /> */}
+      <ComputersCanvas />
     </section>
   );
 };
