@@ -5,11 +5,12 @@ import { styles } from "../styles";
 
 import Intro from "./Intro";
 import { ComputersCanvas } from "./canvas";
+import Neurons from "./Neurons";
 
 const Hero = () => {
   return (
     // wiout navbar area
-    <section className=" relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto">
       {/* Hero.sample */}
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
@@ -21,14 +22,14 @@ const Hero = () => {
         </div>
 
         {/* intro fixed content */}
-        <div>
+        <div className="brea-words">
           <h1 className={`${styles.heroHeadText}`}>
             Hi, this is
             <span className=" text-orange-400"> Maximilian.raku.Lok</span>
           </h1>
           <p className={`${styles.heroSubText} mt-4 text-white`}>
             Working as
-            <Intro className={` text-violet-400`} />
+            <Intro className={`sm:mx-auto text-violet-400`} />
           </p>
         </div>
       </div>

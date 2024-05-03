@@ -64,7 +64,7 @@ const Navbar = () => {
           `}
           >
             {/* dropdown links */}
-            <ul className=" list-none flex justify-end items-start flex-col gap-4">
+            <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
