@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 
 import Intro from "./Intro";
-import { ComputersCanvas } from "./canvas";
-import Neurons from "./Neurons";
+import DesktopCanvas from "./canvas/Desktop";
+
+// import Neurons from "./Neurons";
 
 const Hero = () => {
   return (
@@ -22,10 +23,10 @@ const Hero = () => {
         </div>
 
         {/* intro fixed content */}
-        <div className="brea-words">
+        <div className="break-words">
           <h1 className={`${styles.heroHeadText}`}>
             Hi, this is
-            <span className=" text-orange-400"> Maximilian.raku.Lok</span>
+            <div className="text-orange-400">Maximilian Raku Lok</div>
           </h1>
           <p className={`${styles.heroSubText} mt-4 text-white`}>
             Working as
@@ -34,8 +35,29 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 3d computer module */}
-      <ComputersCanvas />
+      {/* 3d desktop/computer module */}
+      <DesktopCanvas className={`mt-4`} />
+
+      {/* scroll-icon */}
+      <div className="absolute xs:bottom-2 bottom-24 w-full flex justify-center items-center">
+        {/* click scroll */}
+        <a href="#about">
+          <div className="w-[34px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+            {/* motion animate component */}
+            <motion.dev
+              animate={{
+                y: [0, 24, 0], // moving only y[]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className="w-3 h-3 rounded-full bg-secondary"
+            />
+          </div>
+        </a>
+      </div>
     </section>
   );
 };
