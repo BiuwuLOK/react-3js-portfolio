@@ -32,6 +32,9 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+// customs
+import mouse from "./mouse.svg";
+
 export {
   logo,
   logoAdj,
@@ -62,4 +65,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  mouse,
 };
