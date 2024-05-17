@@ -33,9 +33,9 @@ const DesktopPC = ({ isMobile, isTablet }) => {
         intensity={1.75} /* origin = 1 */
         position={
           isMobile
-            ? [0, -2.25, 0]
+            ? [0, -1.45, 0]
             : isTablet
-            ? [0, -3.15, -0.25]
+            ? [0, -3.35, -0.25]
             : [0, -2.45, -0.25]
         } /* adding for adjust both mobile or web */
         color={"#ffffff"} /* prevent lights opacity */
@@ -61,7 +61,7 @@ const DesktopPC = ({ isMobile, isTablet }) => {
         } /* mobile origin = 0.7 */
         position={
           isMobile
-            ? [0, -3.55, -0.55]
+            ? [0, -3.05, -0.55]
             : isTablet
             ? [0, -5.65, -1.25]
             : [0, -5.65, -1.25]
