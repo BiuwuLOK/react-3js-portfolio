@@ -8,7 +8,7 @@ const HeroIcons = ({ isMobile, isTablet }) => {
   // debug when use as single component.
 
   // def base class for icon positioning
-  const baseIconPosition = "absolute xs:bottom-2 w-full flex";
+  const baseIconPosition = "absolute xs:bottom-2 bottom-24 w-full flex";
 
   // re-size for the scroll icon
   const scrollIconSize =
@@ -26,9 +26,11 @@ const HeroIcons = ({ isMobile, isTablet }) => {
 
   return (
     // base icon bar
-    <div className="absolute xs:bottom-6 bottom-24 w-full flex justify-center items-center">
+    <div className={`${baseIconPosition} justify-center items-center`}>
       <a href="#about">
-        <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+        <div
+          className={`${scrollIconSize} rounded-3xl border-4 border-secondary flex justify-center items-start`}
+        >
           <motion.div
             animate={{
               y: [0, 24, 0],
@@ -38,7 +40,7 @@ const HeroIcons = ({ isMobile, isTablet }) => {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className="w-3 h-3 rounded-full bg-secondary mb-1"
+            className={`${scrollIconDotSize} w-3 h-3 rounded-full bg-secondary mb-1`}
           />
         </div>
       </a>
