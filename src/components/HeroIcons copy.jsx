@@ -26,22 +26,28 @@ const HeroIcons = ({ isMobile, isTablet }) => {
 
   return (
     // base icon bar
-    <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-      <a href="#about">
-        <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-          <motion.div
-            animate={{
-              y: [0, 24, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-            className="w-3 h-3 rounded-full bg-secondary mb-1"
-          />
-        </div>
-      </a>
+    <div className="bottom-14 absolute w-full">
+      {/* scroll-icon */}
+      <div className={`${baseIconPosition} justify-center `}>
+        <a href="#about">
+          <div
+            className={`${scrollIconSize} rounded-2xl border-4 border-secondary flex justify-center items-start`}
+          >
+            {/* motion animate component */}
+            <motion.dev
+              animate={{
+                y: [0, 24, 0], // moving only y[]
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className={`${scrollIconDotSize} rounded-full bg-secondary`}
+            />
+          </div>
+        </a>
+      </div>
       {/* mouse-icon */}
       <div className={`${baseIconPosition} ${mouseIconVisibility} justify-end`}>
         <img src={mouse} alt="mouse" className="object-contain" />
