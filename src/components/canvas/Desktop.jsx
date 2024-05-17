@@ -1,14 +1,16 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 // run `npm install --legacy-peer-deps three` if the render broked on diff browser
 
+// import UseDviceSize from "../usehooks/UseDviceSize";
+// import once if debug as single component
+
 import CanvasLoader from "../Loader";
-import UseDviceSize from "../usehooks/UseDviceSize";
 
 // isMobile as State check if mobile for adjust
-const DesktopPC = () => {
+const DesktopPC = ({ isMobile, isTablet }) => {
   const desktopModel = useGLTF("./desktop_pc/scene.gltf");
   /* 
     find more on
@@ -16,8 +18,8 @@ const DesktopPC = () => {
     https://sketchfab.com/features/free-3d-models
   */
 
-  const { isMobile, isTablet } = UseDviceSize();
-  // useState function param
+  // const { isMobile, isTablet } = UseDviceSize();
+  // useState function param for debug when single component.
 
   return (
     <mesh>
@@ -76,7 +78,7 @@ const DesktopPC = () => {
   );
 };
 
-const DesktopCanvas = () => {
+const DesktopCanvas = ({ isMobile, isTablet }) => {
   // UseDviceSize already imported
   return (
     <Canvas
@@ -96,7 +98,8 @@ const DesktopCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <DesktopPC /* listen mobile width */ />
+        {/* Pass the isMobile and isTablet props to DesktopPC */}
+        <DesktopPC isMobile={isMobile} isTablet={isTablet} />
       </Suspense>
 
       <Preload all />
