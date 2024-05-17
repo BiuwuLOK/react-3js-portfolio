@@ -21,13 +21,13 @@ const HeroIcons = ({ isMobile, isTablet }) => {
   const mouseIconVisibility = isMobile
     ? "hidden"
     : isTablet
-    ? "h-[40px]"
-    : "h-[64px]";
+    ? "w-[40px] h-[40px]"
+    : "w-[64px] h-[64px]";
 
   return (
     // base icon bar
     <div className={`${baseIconPosition} justify-center items-center`}>
-      <a href="#about">
+      <a href="#about" className="block">
         <div
           className={`${scrollIconSize} rounded-3xl border-4 border-secondary flex justify-center items-start`}
         >
@@ -40,12 +40,12 @@ const HeroIcons = ({ isMobile, isTablet }) => {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className={`${scrollIconDotSize} w-3 h-3 rounded-full bg-secondary mb-1`}
+            className={`${scrollIconDotSize} rounded-full bg-secondary mb-1`}
           />
         </div>
       </a>
       {/* mouse-icon */}
-      <div className={`${baseIconPosition} ${mouseIconVisibility} justify-end`}>
+      <div className={`${mouseIconVisibility} absolute bottom-0 right-0`}>
         <img src={mouse} alt="mouse" className="object-contain" />
       </div>
     </div>
