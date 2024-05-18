@@ -51,9 +51,7 @@ const Hero = () => {
       <HeroIcons
         isMobile={isMobile}
         isTablet={isTablet}
-        browserCondition={
-          browserName === "Safari" || browserName === "Microsoft Edge"
-        }
+        browserCondition={browserName === "Safari"}
       />
     </section>
   );
