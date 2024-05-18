@@ -52,7 +52,7 @@ const Hero = () => {
       <HeroIcons
         isMobile={isMobile}
         isTablet={isTablet}
-        browserCondition={isMobileSafari || isSafari || isEdge}
+        browserCondition={isMobileSafari}
       />
     </section>
   );
