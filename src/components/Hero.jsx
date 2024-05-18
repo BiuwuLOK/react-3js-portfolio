@@ -10,6 +10,7 @@ import UseDviceSize from "./usehooks/UseDviceSize";
 
 import DesktopCanvas from "./canvas/Desktop";
 import HeroIcons from "./HeroIcons";
+import { browserName } from "react-device-detect"; // for safari
 
 // import Neurons from "./Neurons";
 
@@ -47,7 +48,11 @@ const Hero = () => {
       {/* 3d desktop/computer module */}
       <DesktopCanvas isMobile={isMobile} isTablet={isTablet} />
       {/* Flowing bottom icons */}
-      <HeroIcons isMobile={isMobile} isTablet={isTablet} />
+      <HeroIcons
+        isMobile={isMobile}
+        isTablet={isTablet}
+        browserCondition={browserName === "Safari"}
+      />
     </section>
   );
 };

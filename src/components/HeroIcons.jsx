@@ -3,13 +3,17 @@
 import { motion } from "framer-motion";
 import { mouse } from "../assets";
 
-const HeroIcons = ({ isMobile, isTablet }) => {
+const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
   // const { isMobile, isTablet } = UseDviceSize();
   // debug when use as single component.
 
   // def base class for icon positioning
-  const baseIconPosition =
-    "absolute xs:bottom-22 sm:bottom-18 md:bottom-6 bottom-16 w-full flex";
+  const baseIconPosition = "absolute bottom-16 w-full flex";
+
+  // browser position adjustment for Safari
+  const conditionIconBarPos = browserCondition
+    ? "xs:bottom-30 sm:bottom-20 md:bottom-12"
+    : "xs:bottom-16 sm:bottom-10 md:bottom-4";
 
   // re-size for the scroll icon
   const scrollIconSize =
@@ -27,7 +31,9 @@ const HeroIcons = ({ isMobile, isTablet }) => {
 
   return (
     // base icon bar
-    <div className={`${baseIconPosition} justify-center items-center`}>
+    <div
+      className={`${baseIconPosition} ${conditionIconBarPos} justify-center items-center`}
+    >
       <a href="#about" className="block">
         <div
           className={`${scrollIconSize} rounded-3xl border-4 border-secondary flex justify-center items-start`}
