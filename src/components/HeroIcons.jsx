@@ -9,7 +9,7 @@ const HeroIcons = ({ isMobile, isTablet }) => {
 
   // def base class for icon positioning
   const baseIconPosition =
-    "absolute xs:bottom-20 sm:bottom-16 md:bottom-6 bottom-16 w-full flex";
+    "absolute xs:bottom-22 sm:bottom-18 md:bottom-6 bottom-16 w-full flex";
 
   // re-size for the scroll icon
   const scrollIconSize =
