@@ -8,7 +8,8 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
   // debug when use as single component.
 
   // def base class for icon positioning
-  const baseIconPosition = "absolute bottom-4 w-full flex";
+  const baseIconPosition =
+    "absolute bottom-0 w-full flex  justify-center items-center";
 
   // browser position adjustment for Safari
   const conditionIconBarPos = browserCondition
@@ -31,7 +32,7 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
 
   return (
     // base icon bar
-    <div className={`${baseIconPosition} justify-center items-center`}>
+    <div className={`${baseIconPosition} ${conditionIconBarPos}`}>
       <a href="#about" className="block">
         <div
           className={`${scrollIconSize} rounded-3xl border-4 border-secondary flex justify-center items-start`}
