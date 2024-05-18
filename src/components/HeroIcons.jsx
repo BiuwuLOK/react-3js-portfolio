@@ -9,12 +9,12 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
 
   // def base class for icon positioning
   const baseIconPosition =
-    "absolute bottom-4 w-full flex justify-center items-center";
+    "absolute bottom-24 w-full flex justify-center items-center";
 
   // browser position adjustment for Safari
   const conditionIconBarPos = browserCondition
-    ? "xs:bottom-34 sm:bottom-22 md:bottom-12"
-    : "xs:bottom-12 sm:bottom-10 md:bottom-4";
+    ? "sm:bottom-16 md:bottom-10 lg:bottom-4"
+    : "sm:bottom-10 md:bottom-4 lg:bottom-2";
 
   // re-size for the scroll icon
   const scrollIconSize =
