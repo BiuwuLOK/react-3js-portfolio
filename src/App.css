@@ -50,3 +50,7 @@
     display: initial;
   }
 }
+
+.safari-bottom-area {
+  padding-bottom: env(safe-area-inset-bottom);
+}
