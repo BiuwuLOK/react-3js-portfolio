@@ -79,14 +79,19 @@ const DesktopPC = ({ isMobile, isTablet }) => {
 };
 
 const DesktopCanvas = ({ isMobile, isTablet }) => {
-  // UseDviceSize already imported
+  // UseDviceSize params
+
   return (
     <Canvas
       frameloop="demand"
       shadows
-      // SoftShadows // some browser wont work
+      // SoftShadows // some browser not work
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      eventPrefix="offset"
+
+      // style={{ pointerEvents: "none" }}
+      // Attach event listeners conditionally based on device type
     >
       <Suspense
         /* lodaer prevent app breakdown cause by browser delay */ fallback={

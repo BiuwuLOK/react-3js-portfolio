@@ -20,12 +20,16 @@ const Hero = () => {
   // when def error check child component duplicate defined params
   const { isMobile, isTablet } = UseDviceSize();
 
+  // adjustment
+  const heroSectionStyles =
+    isMobile || isTablet ? { touchAction: "pan-y" } : {};
+
   return (
-    // wiout navbar area
+    /* Hero section */
     <section className="relative w-full h-screen mx-auto">
-      {/* Hero tamplate */}
+      {/* Hero and intro text */}
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex items-start gap-5`}
       >
         {/* liner icon */}
         <div className="flex flex-col justify-center items-center mt-5">
@@ -46,8 +50,13 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 3d desktop/computer module */}
+      {/*
+       3d desktop/computer module
+       this part can rotate or holding-move when users touch
+       but limit by the 3D object area
+      */}
       <DesktopCanvas isMobile={isMobile} isTablet={isTablet} />
+
       {/* Flowing bottom icons */}
       <HeroIcons
         isMobile={isMobile}
