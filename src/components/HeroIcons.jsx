@@ -12,8 +12,8 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
 
   // browser position adjustment for Safari
   const conditionPosition = browserCondition
-    ? "xs:safari-icon-bottom sm:safari-icon-bottom bottom-12"
-    : "xs:bottom-4 bottom-12";
+    ? "xs:bottom-10 bottom-32"
+    : "xs:bottom-6 bottom-12";
 
   // re-size for the scroll icon
   const scrollIconSize =
@@ -31,9 +31,11 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
 
   return (
     /* base icon bar */
-    <div className={`${baseIconBarClass} ${conditionPosition} z-10`}>
+    <div
+      className={`${baseIconBarClass} ${conditionPosition} z-10 safari-icon-bottom`}
+    >
       {/* scroll icon */}
-      <a href="#about" className="relative">
+      <a href="#about">
         <div
           className={`${scrollIconSize} rounded-3xl border-4 border-secondary flex justify-center items-start`}
         >
