@@ -54,6 +54,6 @@
 .safari-icon-bottom {
   padding-bottom: env(
     safe-area-inset-bottom,
-    1rem
+    4rem
   ); /* Fallback if env() is not supported */
 }
