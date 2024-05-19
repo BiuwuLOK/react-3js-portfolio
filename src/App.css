@@ -51,6 +51,9 @@
   }
 }
 
-.safari-bottom-area {
-  padding-bottom: env(safe-area-inset-bottom);
+.safari-icon-bottom {
+  padding-bottom: env(
+    safe-area-inset-bottom,
+    1rem
+  ); /* Fallback if env() is not supported */
 }
