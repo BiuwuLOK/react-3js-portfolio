@@ -31,9 +31,7 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
 
   return (
     /* base icon bar */
-    <div
-      className={`${baseIconBarClass} ${conditionPosition} z-10 safari-icon-bottom`}
-    >
+    <div className={`${baseIconBarClass} ${conditionPosition} z-10`}>
       {/* scroll icon */}
       <a href="#about">
         <div
