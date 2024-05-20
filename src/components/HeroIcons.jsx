@@ -2,13 +2,16 @@
 
 import { motion } from "framer-motion";
 import { mouse } from "../assets";
+import { div } from "three/examples/jsm/nodes/Nodes.js";
 
 const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
   // const { isMobile, isTablet } = UseDviceSize();
   // debug when use as single component.
 
   // def base class for icon positioning
-  const baseIconBarClass = "absolute w-full flex justify-center items-center";
+  const baseIconBarClass = "absolute flex w-full justify-center items-center";
+
+  const baseIconCenter = "flex justify-center";
 
   // browser position adjustment for Safari
   const conditionPosition = browserCondition
@@ -32,14 +35,22 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
   return (
     /* base icon bar */
     <div className={`${baseIconBarClass} ${conditionPosition} z-10`}>
-      {/* scroll icon */}
+      {/* scroll button */}
       <a
         href="#about"
-        className="flex justify-center items-center text-violet-400 text-sm"
+        className={`${baseIconCenter} items-center text-violet-400 text-sm`}
       >
-        {isMobile && <span className="mr-2">Click</span>}
+        {/* scroll button notice text */}
+        {isMobile && (
+          <div className="absolute w-[144px] flex justify-around underline decoration-wavy font-bold">
+            <span>Click</span>
+            <span></span>
+            <span>me !</span>
+          </div>
+        )}
+        {/* scroll icon */}
         <div
-          className={`${scrollIconSize} rounded-3xl border-4 border-secondary flex justify-center items-start`}
+          className={`${scrollIconSize} ${baseIconCenter} rounded-3xl border-4 border-secondary items-start`}
         >
           <motion.div
             animate={{
@@ -53,7 +64,6 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
             className={`${scrollIconDotSize} rounded-full bg-secondary mb-1`}
           />{" "}
         </div>
-        {isMobile && <span className="ml-2">me!</span>}
       </a>
 
       {/* mouse-icon */}
