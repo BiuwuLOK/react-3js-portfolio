@@ -65,11 +65,13 @@ const DesktopPC = ({ isMobile, isTablet, isMobileSafari }) => {
             : isMobile
             ? 0.375
             : isTablet
-            ? 0.6
+            ? 0.55
             : 0.75
         } /* mobile origin = 0.7 */
         position={
-          isMobile
+          (isMobile && isMobileSafari) || (isMobile && isFirefox)
+            ? [0, -2.55, -0.47]
+            : isMobile
             ? [0, -3.05, -0.55]
             : isTablet
             ? [0, -5.65, -1.25]
