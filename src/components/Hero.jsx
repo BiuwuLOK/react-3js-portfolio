@@ -11,7 +11,7 @@ import UseDviceSize from "./usehooks/UseDviceSize";
 import DesktopCanvas from "./canvas/Desktop";
 import HeroIcons from "./HeroIcons";
 
-import { isMobileSafari } from "react-device-detect"; // for safari
+import { isMobileSafari, isSafari } from "react-device-detect"; // for safari
 
 // import Neurons from "./Neurons";
 
@@ -54,7 +54,7 @@ const Hero = () => {
       <DesktopCanvas
         isMobile={isMobile}
         isTablet={isTablet}
-        isMobileSafari={isMobileSafari}
+        isSafari={isSafari}
       />
 
       {/* Flowing bottom icons */}
