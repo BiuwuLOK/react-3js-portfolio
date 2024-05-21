@@ -51,11 +51,7 @@ const Hero = () => {
        this part can rotate or holding-move when users touch
        but limit by the 3D object area
       */}
-      <DesktopCanvas
-        isMobile={isMobile}
-        isTablet={isTablet}
-        isSafari={isSafari}
-      />
+      <DesktopCanvas isMobile={isMobile} isTablet={isTablet} />
 
       {/* Flowing bottom icons */}
       <HeroIcons

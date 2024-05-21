@@ -8,10 +8,10 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 // import once if debug as single component
 
 import CanvasLoader from "../Loader";
-import { isSafari, isFirefox } from "react-device-detect";
+import { isSafari, isFirefox, isMobileSafari } from "react-device-detect";
 
 // isMobile as State check if mobile for adjust
-const DesktopPC = ({ isMobile, isTablet, isMobileSafari, isSafari }) => {
+const DesktopPC = ({ isMobile, isTablet }) => {
   const desktopModel = useGLTF("./desktop_pc/scene.gltf");
   /* 
     find more on
@@ -58,7 +58,9 @@ const DesktopPC = ({ isMobile, isTablet, isMobileSafari, isSafari }) => {
         object={desktopModel.scene}
         // add mobile adjust state listener
         scale={
-          (isMobile && isSafari) || (isMobile && isFirefox)
+          (isMobile && isSafari) ||
+          (isMobile && isFirefox) ||
+          (isMobile && isMobileSafari)
             ? 0.1
             : isMobile
             ? 0.375
@@ -67,7 +69,9 @@ const DesktopPC = ({ isMobile, isTablet, isMobileSafari, isSafari }) => {
             : 0.75
         } /* mobile origin = 0.7 */
         position={
-          (isMobile && isSafari) || (isMobile && isFirefox)
+          (isMobile && isSafari) ||
+          (isMobile && isFirefox) ||
+          (isMobile && isMobileSafari)
             ? [0, -2.55, -0.1]
             : isMobile
             ? [0, -3.05, -0.55]
