@@ -33,9 +33,7 @@ const DesktopPC = ({ isMobile, isTablet, isMobileSafari }) => {
       <pointLight
         intensity={1.75} /* origin = 1 */
         position={
-          isMobile && isMobileSafari
-            ? [0, -1.25, 0]
-            : isMobile
+          isMobile
             ? [0, -1.45, 0]
             : isTablet
             ? [0, -3.35, -0.25]
@@ -61,7 +59,7 @@ const DesktopPC = ({ isMobile, isTablet, isMobileSafari }) => {
         // add mobile adjust state listener
         scale={
           (isMobile && isMobileSafari) || (isMobile && isFirefox)
-            ? 0.3
+            ? 0.1
             : isMobile
             ? 0.375
             : isTablet
