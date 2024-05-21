@@ -11,7 +11,7 @@ import UseDviceSize from "./usehooks/UseDviceSize";
 import DesktopCanvas from "./canvas/Desktop";
 import HeroIcons from "./HeroIcons";
 
-import { isMobileSafari, isSafari, isEdge } from "react-device-detect"; // for safari
+import { isMobileSafari } from "react-device-detect"; // for safari
 
 // import Neurons from "./Neurons";
 
@@ -19,10 +19,6 @@ const Hero = () => {
   // pass param from useHooks
   // when def error check child component duplicate defined params
   const { isMobile, isTablet } = UseDviceSize();
-
-  // adjustment
-  const heroSectionStyles =
-    isMobile || isTablet ? { touchAction: "pan-y" } : {};
 
   return (
     /* Hero section */
@@ -55,7 +51,11 @@ const Hero = () => {
        this part can rotate or holding-move when users touch
        but limit by the 3D object area
       */}
-      <DesktopCanvas isMobile={isMobile} isTablet={isTablet} />
+      <DesktopCanvas
+        isMobile={isMobile}
+        isTablet={isTablet}
+        isMobileSafari={isMobileSafari}
+      />
 
       {/* Flowing bottom icons */}
       <HeroIcons
