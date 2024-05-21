@@ -2,7 +2,7 @@ import React from "react";
 
 import { styles } from "../styles";
 
-import Intro from "./Intro";
+import Intro from "./HeroWritter";
 
 import UseDviceSize from "./usehooks/UseDviceSize";
 // import params and hook function
