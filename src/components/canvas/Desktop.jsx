@@ -33,8 +33,10 @@ const DesktopPC = ({ isMobile, isTablet }) => {
       <pointLight
         intensity={1.75} /* origin = 1 */
         position={
-          isMobile
-            ? [0, -1.45, 0]
+          isMobile && isMobileSafari
+            ? [0, -0.95, 0]
+            : isMobile
+            ? [0, -1.75, 0]
             : isTablet
             ? [0, -3.35, -0.25]
             : [0, -2.45, -0.25]
@@ -58,17 +60,17 @@ const DesktopPC = ({ isMobile, isTablet }) => {
         object={desktopModel.scene}
         // add mobile adjust state listener
         scale={
-          (isMobile && isFirefox) || (isMobile && isMobileSafari)
-            ? 0.1
+          isMobile && isMobileSafari
+            ? 0.275
             : isMobile
-            ? 0.375
+            ? 0.325
             : isTablet
-            ? 0.55
+            ? 0.65
             : 0.75
         } /* mobile origin = 0.7 */
         position={
-          (isMobile && isFirefox) || (isMobile && isMobileSafari)
-            ? [0, -1.75, -0.1]
+          isMobile && isMobileSafari
+            ? [0, -2.15, -0.375]
             : isMobile
             ? [0, -3.05, -0.55]
             : isTablet
