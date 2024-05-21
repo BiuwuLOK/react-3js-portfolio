@@ -58,9 +58,7 @@ const DesktopPC = ({ isMobile, isTablet }) => {
         object={desktopModel.scene}
         // add mobile adjust state listener
         scale={
-          (isMobile && isSafari) ||
-          (isMobile && isFirefox) ||
-          (isMobile && isMobileSafari)
+          (isMobile && isFirefox) || (isMobile && isMobileSafari)
             ? 0.1
             : isMobile
             ? 0.375
@@ -69,10 +67,8 @@ const DesktopPC = ({ isMobile, isTablet }) => {
             : 0.75
         } /* mobile origin = 0.7 */
         position={
-          (isMobile && isSafari) ||
-          (isMobile && isFirefox) ||
-          (isMobile && isMobileSafari)
-            ? [0, -2.55, -0.1]
+          (isMobile && isFirefox) || (isMobile && isMobileSafari)
+            ? [0, -1.75, -0.1]
             : isMobile
             ? [0, -3.05, -0.55]
             : isTablet
