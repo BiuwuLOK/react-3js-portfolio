@@ -27,7 +27,7 @@ const TypewriterEffect = () => {
           900,
           "", // pre color change
           () => setTextColor("#38bdf8"),
-          `workflow management, quality control`,
+          `project workflow, quality control`,
           900,
           "", // pre color change
           () => setTextColor("#34d399"),
@@ -36,7 +36,7 @@ const TypewriterEffect = () => {
           "", // pre color change
           (e) => e.classList.add(CURSOR_CLASS), //
           () => setTextColor("LightSalmon"),
-          `full stack development, \n workflow management, quality control, \n researche of data science etc.`,
+          `full stack develop, project workflow manage, \n quality control, data science etc.`,
           4444, // Pause after the full text is typed
           "",
           210,

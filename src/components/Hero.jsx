@@ -2,7 +2,7 @@ import React from "react";
 
 import { styles } from "../styles";
 
-import Intro from "./HeroWritter";
+import HeroWriter from "./HeroWritter";
 
 import UseDviceSize from "./usehooks/UseDviceSize";
 // import params and hook function
@@ -20,6 +20,8 @@ const Hero = () => {
   // when def error check child component duplicate defined params
   const { isMobile, isTablet } = UseDviceSize();
 
+  const NameTag = isMobile ? "div" : "span";
+
   return (
     /* Hero section */
     <section className="relative w-full h-screen mx-auto">
@@ -33,15 +35,16 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        {/* intro content */}
+        {/* text content */}
         <div className="break-words">
-          <h1 className={`${styles.heroHeadText}`}>
-            Hi, this is
-            <div className="text-orange-400">Maximilian Raku Lok</div>
-          </h1>
-          <p className={`${styles.heroSubText} mt-4 text-white`}>
-            Working as
-            <Intro className={`sm:mx-auto text-violet-400`} />
+          <h4 className={`${styles.heroHeadText} text-white`}>
+            Hi, I am
+            <NameTag className="text-orange-400"> Maximilian</NameTag>
+          </h4>
+
+          <p className={`${styles.heroSubText} mt-2 text-white`}>
+            Working on
+            <HeroWriter className={`sm:mx-auto text-violet-400`} />
           </p>
         </div>
       </div>

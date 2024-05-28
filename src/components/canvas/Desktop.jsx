@@ -34,12 +34,12 @@ const DesktopPC = ({ isMobile, isTablet }) => {
         intensity={1.75} /* origin = 1 */
         position={
           isMobile && isMobileSafari
-            ? [0, -0.95, 0]
+            ? [0, -0.55, 0]
             : isMobile
-            ? [0, -1.75, 0]
+            ? [0, -0.9, 0]
             : isTablet
-            ? [0, -3.35, -0.25]
-            : [0, -2.45, -0.25]
+            ? [0, -0.65, -0.25]
+            : [0, -0.55, -0.25]
         } /* adding for adjust both mobile or web */
         color={"#ffffff"} /* prevent lights opacity */
         castShadow
@@ -61,29 +61,33 @@ const DesktopPC = ({ isMobile, isTablet }) => {
         // add mobile adjust state listener
         scale={
           isMobile && isMobileSafari
-            ? 0.275
+            ? 0.425
             : isMobile
-            ? 0.325
+            ? 0.55
             : isTablet
-            ? 0.65
-            : 0.75
+            ? 0.7
+            : 0.83
         } /* mobile origin = 0.7 */
         position={
           isMobile && isMobileSafari
-            ? [0, -2.15, -0.375]
+            ? [0, -2.25, -0.45]
             : isMobile
-            ? [0, -3.05, -0.55]
+            ? [0, -3.05, -0.75]
             : isTablet
-            ? [0, -5.65, -1.25]
-            : [0, -5.65, -1.25]
+            ? [-0.14, -3.55, -1.25]
+            : [0, -4.05, -1.25]
         }
         /*
-          extra y[corr] adjust for text typewritter
+          extra y[corr] adjust for text typewrittver
           mobile origin = [0, -3, -2.2]
           web origin = [0, -3.25, -1.5]
         */
 
-        rotation={[-0.01, -0.2, -0.15]} // origin = [-0.01, -0.2, -0.1]
+        rotation={
+          isMobile || isMobileSafari
+            ? [-0.01, 0.26, -0.16]
+            : [-0.01, -0.42, -0.12]
+        } // origin = [-0.01, -0.2, -0.1]
       />
     </mesh>
   );
