@@ -18,7 +18,7 @@
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
-    "react-parallax-tilt": "^1.7.218",
+    "react-parallax-tilt": "^1.7.227",
     "react-router-dom": "^6.22.3",
     "react-type-animation": "^3.2.0",
     "three": "^0.149.0"
