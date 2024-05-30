@@ -37,7 +37,7 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
     <div className={`${baseIconBarClass} ${conditionPosition} z-10`}>
       {/* scroll button */}
       <a
-        href="#about"
+        href="#About"
         className={`${baseIconCenter} items-center text-violet-400 text-sm`}
       >
         {/* scroll button notice text */}
@@ -62,7 +62,7 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
               repeatType: "loop",
             }}
             className={`${scrollIconDotSize} rounded-full bg-secondary mb-1`}
-          />{" "}
+          />
         </div>
       </a>
 
