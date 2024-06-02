@@ -2,13 +2,13 @@ import React, { Suspense } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-// run `npm install --legacy-peer-deps three` if the render broked on diff browser
+// use `npm install --legacy-peer-deps three` if the render broked
 
 // import UseDviceSize from "../usehooks/UseDviceSize";
 // import once if debug as single component
 
 import CanvasLoader from "../Loader";
-import { isSafari, isFirefox, isMobileSafari } from "react-device-detect";
+import { isMobileSafari } from "react-device-detect";
 
 // isMobile as State check if mobile for adjust
 const DesktopPC = ({ isMobile, isTablet }) => {
@@ -30,6 +30,17 @@ const DesktopPC = ({ isMobile, isTablet }) => {
         groundColor="black"
       />
 
+      <spotLight
+        position={[0, 5.25, -1.25]}
+        /* for adjust */
+        angle={0.9} /* origin = 0.12 */
+        // if on some other device does not correctly having light enable following intensity
+        // intensity={300} /* debug */
+        penumbra={1}
+        castShadow
+        shadow-mapSize={1024}
+      />
+
       <pointLight
         intensity={1.75} /* origin = 1 */
         position={
@@ -43,17 +54,6 @@ const DesktopPC = ({ isMobile, isTablet }) => {
         } /* adding for adjust both mobile or web */
         color={"#ffffff"} /* prevent lights opacity */
         castShadow
-      />
-
-      <spotLight
-        position={[0, 5.25, -1.25]}
-        /* for adjust */
-        angle={0.9} /* origin = 0.12 */
-        // if on some other device does not correctly having light enable following intensity
-        // intensity={300} /* debug */
-        penumbra={1}
-        castShadow
-        shadow-mapSize={1024}
       />
 
       <primitive

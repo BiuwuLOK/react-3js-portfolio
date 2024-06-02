@@ -5,15 +5,13 @@ import { styles } from "../styles";
 import HeroWriter from "./HeroWritter";
 
 import UseDviceSize from "./usehooks/UseDviceSize";
-// import params and hook function
-// use under DesktopCanvas and HeroIcons
+// import useHooks, params for desktopCanvas
 
 import DesktopCanvas from "./canvas/Desktop";
 import HeroIcons from "./HeroIcons";
 
-import { isMobileSafari, isSafari } from "react-device-detect"; // for safari
-
-// import Neurons from "./Neurons";
+import { isMobileSafari, isSafari } from "react-device-detect";
+// for safari
 
 const Hero = () => {
   // pass param from useHooks

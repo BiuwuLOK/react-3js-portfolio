@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { mouse } from "../assets";
-import { div } from "three/examples/jsm/nodes/Nodes.js";
 
 const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
   // const { isMobile, isTablet } = UseDviceSize();
@@ -29,7 +28,7 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
   const mouseIconVisibility = isMobile
     ? "hidden"
     : isTablet
-    ? "w-[40px] h-[40px]"
+    ? "w-[44px] h-[44px]"
     : "w-[64px] h-[64px]";
 
   return (
