@@ -6,6 +6,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
+    "plugin:react-three/recommended",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: {
@@ -14,7 +15,7 @@ module.exports = {
     requireConfigFile: false,
   },
   settings: { react: { version: "18.2" } },
-  plugins: ["react-refresh"],
+  plugins: ["react-refresh", "react-three"],
   rules: {
     "react/jsx-no-target-blank": "off",
     "react-refresh/only-export-components": [

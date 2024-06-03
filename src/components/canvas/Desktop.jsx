@@ -2,10 +2,15 @@ import React, { Suspense } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-// use `npm install --legacy-peer-deps three` if the render broked
+/*
+  1. for render broked 
+    - use `npm install --legacy-peer-deps three`
+  2. encounting massive `Unknown property ... eslint` error
+    - use `npm install @react-three/eslint-plugin --save-dev`  
+*/
 
 // import UseDviceSize from "../usehooks/UseDviceSize";
-// import once if debug as single component
+// only for debug as single component
 
 import CanvasLoader from "../Loader";
 import { isMobileSafari } from "react-device-detect";
@@ -14,7 +19,7 @@ import { isMobileSafari } from "react-device-detect";
 const DesktopPC = ({ isMobile, isTablet }) => {
   const desktopModel = useGLTF("./desktop_pc/scene.gltf");
   /* 
-    find more on
+    more gltf models can be found
     https://free3d.com/3d-models/
     https://sketchfab.com/features/free-3d-models
   */
@@ -25,7 +30,8 @@ const DesktopPC = ({ isMobile, isTablet }) => {
   return (
     <mesh>
       <hemisphereLight
-        /* some of the origin stats was not correctly function, please check the stats if all the lights not flush to the fit-able position */
+        /* some origin variable not correctly function, 
+        check the variable if the lights not casting right position */
         intensity={0.25} /* origin = 0.15 */
         groundColor="black"
       />
@@ -33,10 +39,10 @@ const DesktopPC = ({ isMobile, isTablet }) => {
       <spotLight
         position={[0, 5.25, -1.25]}
         /* for adjust */
-        angle={0.9} /* origin = 0.12 */
+        angle={Math.PI / 4} /* origin = 0.12 */
         // if on some other device does not correctly having light enable following intensity
         // intensity={300} /* debug */
-        penumbra={1}
+        penumbra={1.0}
         castShadow
         shadow-mapSize={1024}
       />
@@ -82,7 +88,6 @@ const DesktopPC = ({ isMobile, isTablet }) => {
           mobile origin = [0, -3, -2.2]
           web origin = [0, -3.25, -1.5]
         */
-
         rotation={
           isMobile || isMobileSafari
             ? [-0.01, 0.26, -0.16]
