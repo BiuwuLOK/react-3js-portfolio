@@ -46,7 +46,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React & React Native",
+    title: "Programming",
     icon: mobile,
   },
   {
