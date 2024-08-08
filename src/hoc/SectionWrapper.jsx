@@ -19,9 +19,9 @@ const SectionWrapper = (Component, idName) =>
       <motion.section
         /* motion build-in properties */
         variants={staggerContainer()} // apply animate
-        initial="hidden" // hide before animate
-        whileInView="show" //
-        viewport={{ once: false, amount: 0.4 }} // amount to 30% screen view
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.2 }} // amount to 30% screen view
         onAnimationComplete={() => setAnimateComplete(true)} // turn on glare effects
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
       >

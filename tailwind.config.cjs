@@ -1,4 +1,15 @@
+// tailwind does not build-in some css in current version
+// custom modules
+/* 
+  boxShadow,
+  screens,
+  backgroundImage,
+  textShadow,
+*/
+
 /** @type {import('tailwindcss').Config} */
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
@@ -21,7 +32,23 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
+      textShadow: {
+        sm: "0 1px 2px rgba(0, 0, 0, 0.5)",
+        DEFAULT: "0 2px 4px rgba(0, 0, 0, 0.5)",
+        lg: "2px 4px 8px rgba(0, 0, 0, 0.7)",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };

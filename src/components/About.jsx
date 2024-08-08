@@ -38,10 +38,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[16px] max-w-3xl leading-[30px]"
       >
-        blablablablablablabla blablablablablablabla.
+        {" "}
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+        dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+        ultricies nec, pellentesque eu, pretium quis, sem.
       </motion.p>
 
-      {/* tilt sevice card array */}
+      {/* about tilt sevice card */}
       <motion.div
         variants={parentVariants}
         className="mt-20 flex flex-wrap gap-10"
