@@ -10,7 +10,7 @@ import { transition } from "../utils/trasition";
 import useMeasure from "react-use-measure";
 
 // original 3D BallCanvas
-/* const Tech = () => {
+const Tech = () => {
   return (
     <div className="flex flex-row flex-wrap justify-center gap-10">
       {technologies.map((technology) => (
@@ -20,9 +20,10 @@ import useMeasure from "react-use-measure";
       ))}
     </div>
   );
-}; */
+};
 
 // motion button
+/* 
 const Tech = () => {
   const [ref, bounds] = useMeasure({ scroll: false });
   const [isHover, setIsHover] = useState(false);
@@ -73,5 +74,5 @@ const Tech = () => {
     </MotionConfig>
   );
 };
-
+ */
 export default SectionWrapper(Tech, "");

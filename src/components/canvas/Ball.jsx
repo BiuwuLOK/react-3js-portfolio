@@ -9,6 +9,7 @@ import {
 } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import { f } from "maath/dist/index-0332b2ed.esm";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -40,7 +41,7 @@ const Ball = (props) => {
 const BallCanvas = ({ icon }) => {
   return (
     <Canvas
-      frameloop="demand"
+      frameloop="always"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       shadows

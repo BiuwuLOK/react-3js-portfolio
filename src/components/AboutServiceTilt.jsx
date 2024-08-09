@@ -67,7 +67,7 @@ const AboutServiceTilt = () => {
         glareEnable={true}
         glareMaxOpacity={0.45}
         glareBorderRadius="18px"
-        scale={1.02}
+        scale={1.2}
         gyroscope={true}
         style={parallaxEffect}
       >
