@@ -1,7 +1,7 @@
 import React from "react";
 
-// import Tilt from "react-parallax-tilt";
 import AboutServiceTilt from "./AboutServiceTilt";
+// import Tilt from _about part module
 
 import { motion } from "framer-motion";
 
@@ -12,7 +12,7 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 // js function for Tilts
 
-import { SectionWrapper } from "../hoc";
+import { SectionWrapper } from "../_hoc";
 
 /* about main section */
 const About = () => {
@@ -38,7 +38,6 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[16px] max-w-3xl leading-[30px]"
       >
-        {" "}
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
         ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
         dis parturient montes, nascetur ridiculus mus. Donec quam felis,

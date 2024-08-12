@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
+import { SectionWrapper } from "../_hoc";
 import { slideIn } from "../utils/motion";
 
 const Contact = () => {

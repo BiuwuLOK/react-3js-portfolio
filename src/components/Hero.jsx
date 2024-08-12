@@ -10,7 +10,7 @@ import UseDviceSize from "./usehooks/UseDviceSize";
 import DesktopCanvas from "./canvas/Desktop";
 import HeroIcons from "./HeroIcons";
 
-import { isMobileSafari, isSafari } from "react-device-detect";
+import { isMobileSafari } from "react-device-detect";
 // for safari
 
 const Hero = () => {
@@ -23,9 +23,9 @@ const Hero = () => {
   return (
     /* Hero section */
     <section className="relative w-full h-screen mx-auto">
-      {/* Hero and intro text */}
+      {/* Hero main area */}
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex items-start gap-5`}
+        className={`${styles.paddingX} absolute inset-0 top-[100px] lg:top-[110px] max-w-7xl mx-auto flex items-start gap-4`}
       >
         {/* liner icon */}
         <div className="flex flex-col justify-center items-center mt-5">
@@ -48,11 +48,15 @@ const Hero = () => {
       </div>
 
       {/*
-       3d desktop/computer module
+       3d desktopPC/computer module
        this part can rotate or holding-move when users touch
        but limit by the 3D object area
       */}
-      <DesktopCanvas isMobile={isMobile} isTablet={isTablet} />
+      <DesktopCanvas
+        //
+        isMobile={isMobile}
+        isTablet={isTablet}
+      />
 
       {/* Flowing bottom icons */}
       <HeroIcons

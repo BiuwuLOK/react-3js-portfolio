@@ -65,20 +65,22 @@ const DesktopPC = ({ isMobile, isTablet }) => {
       <primitive
         object={desktopModel.scene}
         // add mobile adjust state listener
+        // control desktopPC_Canvas total scale
         scale={
           isMobile && isMobileSafari
             ? 0.425
             : isMobile
-            ? 0.55
+            ? 0.475
             : isTablet
             ? 0.7
-            : 0.83
+            : 0.825
         } /* mobile origin = 0.7 */
         position={
+          // control position on screen in [x,y,z]
           isMobile && isMobileSafari
-            ? [0, -2.25, -0.45]
+            ? [0, -2.05, -0.55]
             : isMobile
-            ? [0, -3.05, -0.75]
+            ? [0, -2.45, -0.705]
             : isTablet
             ? [-0.14, -3.55, -1.25]
             : [0, -4.05, -1.25]

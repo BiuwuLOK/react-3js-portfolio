@@ -1,6 +1,6 @@
 import React, { Suspense, useState } from "react";
 
-import { SectionWrapper } from "../hoc";
+import { SectionWrapper } from "../_hoc";
 import { BallCanvas } from "./canvas";
 import { technologies } from "../constants";
 

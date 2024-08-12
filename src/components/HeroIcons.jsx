@@ -1,5 +1,3 @@
-// import UseDviceSize from "./usehooks/UseDviceSize";
-
 import { motion } from "framer-motion";
 import { mouse } from "../assets";
 
@@ -15,7 +13,7 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
   // browser position adjustment for Safari
   const conditionPosition = browserCondition
     ? "xs:bottom-12 bottom-28 mb-1"
-    : "xs:bottom-4 lg:bottom-2 bottom-12";
+    : "xs:bottom-6 lg:bottom-4 bottom-14 mb-2";
 
   // re-size for the scroll icon
   const scrollIconSize =
@@ -41,7 +39,7 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
       >
         {/* scroll button notice text */}
         {isMobile && (
-          <div className="absolute w-[144px] flex justify-around underline decoration-wavy font-bold">
+          <div className="absolute w-[144px] flex justify-around underline  hover:decoration-2 font-bold">
             <span>Click</span>
             <span></span>
             <span>me !</span>
@@ -56,7 +54,7 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
               y: [0, 24, 0],
             }}
             transition={{
-              duration: 1.5,
+              duration: 2,
               repeat: Infinity,
               repeatType: "loop",
             }}

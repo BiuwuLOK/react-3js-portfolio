@@ -12,6 +12,9 @@ import {
   StarsCanvas,
 } from "./components";
 
+import ErrorBoundary from "./components/usehooks/ErrorBoundary";
+// debug with R3F(react-three-fiber) canvas components
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -26,7 +29,8 @@ const App = () => {
         <Works />
         <Feedbacks />
         <div className=" relative z-0">
-          <Contact />
+          {/*           <Contact />
+           */}{" "}
           <StarsCanvas />
         </div>
       </div>

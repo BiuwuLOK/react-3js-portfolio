@@ -6,19 +6,19 @@ import * as random from "maath/random/dist/maath-random.esm";
 const Stars = (props) => {
   const ref = useRef();
 
-  const [positions] = random.inSphere(new Float32Array(5001), { radius: 1.2 });
+  /* 
+  const [positions] = random.inSphere(new Float32Array(600), { radius: 1.2 });
   for (let i = 0; i < positions.length; i++) {
     if (isNaN(positions[i])) {
       console.error(`NaN value found at index ${i}`);
       positions[i] = 0; // Replace NaN with a default value
     }
   }
+ */
 
-  /* 
-  const [sphere] = useState(() =>
+  const [starsPosition] = useState(() =>
     random.inSphere(new Float32Array(5001), { radius: 1.2 })
   );
- */
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
@@ -29,7 +29,7 @@ const Stars = (props) => {
     <group rotation={[0, 0, Math.PI / 4]}>
       <Points
         ref={ref}
-        positions={positions}
+        positions={starsPosition}
         stride={3}
         frustumCulled
         {...props}
@@ -49,16 +49,15 @@ const Stars = (props) => {
 const StarsCanvas = () => {
   return (
     <div className="w-full h-auto absolute inset-0 z-[-1]">
-      <Canvas
-        gl={{ preserveDrawingBuffer: true }}
-        camera={{ position: [0, 0, 1] }}
-      >
-        <Suspense fallback={null}>
+      <Suspense fallback={null}>
+        <Canvas
+          gl={{ preserveDrawingBuffer: true }}
+          camera={{ position: [0, 0, 1] }}
+        >
           <Stars />
-        </Suspense>
-
-        <Preload all />
-      </Canvas>
+          <Preload all />
+        </Canvas>
+      </Suspense>
     </div>
   );
 };

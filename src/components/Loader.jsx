@@ -13,7 +13,7 @@ const Loader = () => {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
-      }} // copy from gist working as spinner
+      }} // copy from gist as spinner
     >
       {/* counter part.1 */}
       <span className="canvas-loader"></span>
