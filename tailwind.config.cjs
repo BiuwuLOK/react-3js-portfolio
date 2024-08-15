@@ -50,5 +50,12 @@ module.exports = {
         { values: theme("textShadow") }
       );
     }),
+    function ({ addUtilities }) {
+      addUtilities({
+        ".preserve-3d": {
+          "transform-style": "preserve-3d",
+        },
+      });
+    },
   ],
 };

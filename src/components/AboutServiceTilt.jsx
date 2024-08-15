@@ -15,7 +15,7 @@ const showVariants = {
     opacity: 0,
     y: 50,
     transition: {
-      duration: 0.5,
+      duration: 0.8,
     },
   },
 };
@@ -23,15 +23,16 @@ const showVariants = {
 // Variants for the 3D "pop-out" effect
 const popOutVariants = {
   rest: {
-    z: 20,
+    z: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.6,
     },
   },
   popOut: {
-    z: 60,
+    z: 80,
+    scale: 1.2,
     transition: {
-      duration: 0.5,
+      duration: 0.6,
     },
   },
 };
@@ -66,13 +67,17 @@ const AboutServiceTilt = () => {
         glareBorderRadius="18px"
         scale={1.2}
         gyroscope={true}
-        style={parallaxEffect}
+        // style={parallaxEffect}
+        className="flex flex-col justify-center items-center w-[220px] h-[160px] border-5 border-white rounded-2xl bg-gradient-to-r from-purple-600 to-red-400 preserve-3d"
       >
         <motion.div
+          // motion mouse detect area
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
           initial="rest"
           animate={isHovered ? "popOut" : "rest"}
           variants={popOutVariants}
-          className="items-center"
+          className="w-full h-full flex flex-col justify-center items-center"
         >
           <div className="text-4xl text-shadow-lg">ICONS</div>
           <div className="mt-2">Parallax Tilt</div>

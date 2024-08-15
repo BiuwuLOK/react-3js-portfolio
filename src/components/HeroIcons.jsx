@@ -34,7 +34,7 @@ const HeroIcons = ({ isMobile, isTablet, browserCondition }) => {
     <div className={`${baseIconBarClass} ${conditionPosition} z-10`}>
       {/* scroll button */}
       <a
-        href="#About"
+        href="#about"
         className={`${baseIconCenter} items-center text-violet-400 text-sm`}
       >
         {/* scroll button notice text */}
