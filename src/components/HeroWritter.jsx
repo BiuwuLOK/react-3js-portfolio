@@ -23,20 +23,20 @@ const TypewriterEffect = () => {
         sequence={[
           211, // pre-delay for read-able
           (e) => e.classList.remove(CURSOR_CLASS), // hide cursor
-          `full stack development`,
+          `Full stack Development`,
           900,
           "", // pre color change
           () => setTextColor("#38bdf8"),
-          `project workflow, quality control`,
+          `Workflow, Infra, System manage.`,
           900,
           "", // pre color change
           () => setTextColor("#34d399"),
-          `research of data science`,
+          `Research of Data Science`,
           1200, // Pause after the last sentence is typed
           "", // pre color change
           (e) => e.classList.add(CURSOR_CLASS), //
           () => setTextColor("LightSalmon"),
-          `full stack develop, project workflow manage, \n quality control, data science etc.`,
+          `Full stack develop, Workflows, Infrastructure \n System manage and Data science research etc.`,
           4444, // Pause after the full text is typed
           "",
           210,

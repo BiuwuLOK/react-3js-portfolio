@@ -58,7 +58,10 @@ const parallaxEffect = {
 const AboutServiceTilt = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <motion.div variants={showVariants}>
+    <motion.div
+      variants={showVariants}
+      className="sm:w-[240px] w-[80%] mx-auto p-[2px] rounded-[20px] shadow-card bg-opacity-50"
+    >
       <Tilt
         // className="parallax-effect"
         perspective={500}
@@ -68,7 +71,10 @@ const AboutServiceTilt = () => {
         scale={1.2}
         gyroscope={true}
         // style={parallaxEffect}
-        className="flex flex-col justify-center items-center w-[220px] h-[160px] border-5 border-white rounded-2xl bg-gradient-to-r from-purple-600 to-red-400 preserve-3d"
+        className="flex flex-wrap h-[180px] rounded-2xl
+        border-2 border-x-white border-opacity-50 preserve-3d
+        bg-gradient-to-r from-purple-600 to-red-400 
+        "
       >
         <motion.div
           // motion mouse detect area
