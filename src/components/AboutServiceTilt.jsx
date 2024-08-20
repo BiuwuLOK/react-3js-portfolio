@@ -56,6 +56,8 @@ const parallaxEffect = {
 };
 
 const AboutServiceTilt = () => {
+  const bgGradient = "";
+
   const [isHovered, setIsHovered] = useState(false);
   return (
     <motion.div
@@ -71,10 +73,9 @@ const AboutServiceTilt = () => {
         scale={1.2}
         gyroscope={true}
         // style={parallaxEffect}
-        className="flex flex-wrap h-[180px] rounded-2xl
-        border-2 border-x-white border-opacity-50 preserve-3d
-        bg-gradient-to-r from-purple-600 to-red-400 
-        "
+        className={`${bgGradient} flex flex-wrap h-[180px] rounded-2xl
+        border-2 border-x-white border-opacity-50 preserve-3d 
+        bg-gradient-to-r from-rose-400  to-purple-400`}
       >
         <motion.div
           // motion mouse detect area
