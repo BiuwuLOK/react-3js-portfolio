@@ -114,6 +114,11 @@
   -webkit-text-fill-color: transparent;
 }
 
+.dialog-bg-gradient {
+  background-image: linear-gradient(to right, #9a5177, #f07cff, #f07cff);
+  box-shadow: 0 0 15px 5px rgba(48, 35, 62, 0.5);
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

@@ -73,9 +73,11 @@ const AboutServiceTilt = () => {
         scale={1.2}
         gyroscope={true}
         // style={parallaxEffect}
-        className={`${bgGradient} flex flex-wrap h-[180px] rounded-2xl
-        border-2 border-x-white border-opacity-50 preserve-3d 
-        bg-gradient-to-r from-rose-400  to-purple-400`}
+        className={`flex flex-wrap h-[180px] rounded-2xl
+        shadow-lg
+          preserve-3d
+        dialog-bg-gradient
+        `}
       >
         <motion.div
           // motion mouse detect area
