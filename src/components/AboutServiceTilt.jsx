@@ -3,6 +3,10 @@ import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
+// Stages for the fade-in effect
+// Variants for the fade-in effect
 const showVariants = {
   show: {
     opacity: 1,
@@ -37,8 +41,53 @@ const popOutVariants = {
   },
 };
 
+const AboutServiceTilt = ({ title, icon }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <motion.div
+      variants={showVariants}
+      className="w-[90%] lg:w-[440px] sm:w-[320px] mx-auto p-[2px] rounded-[20px] shadow-card bg-opacity-50"
+    >
+      <Tilt
+        perspective={500}
+        glareEnable={true}
+        glareMaxOpacity={0.45}
+        glareBorderRadius="18px"
+        scale={1.1}
+        gyroscope={true}
+        className={`flex flex-wra2222p h-[240px] rounded-2xl shadow-lg preserve-3d bg-tertiary border-2 bd-dialog-gradient`}
+      >
+        <motion.div
+          // motion mouse detect area
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          initial="rest"
+          animate={isHovered ? "popOut" : "rest"}
+          variants={popOutVariants}
+          className="w-full h-full flex flex-col justify-evenly items-center py-5"
+        >
+          <DotLottieReact
+            src={icon}
+            alt={title}
+            autoplay
+            loop
+            className="w-16 h-16 object-contain"
+          />
+          <h3 className="text-white text-[20px] font-bold text-center mt-4">
+            {title}
+          </h3>
+          <p>Lipsom asldkfjsalkdflsakdjflkj</p>
+        </motion.div>
+      </Tilt>
+    </motion.div>
+  );
+};
+
+export default AboutServiceTilt;
+
+// Previous version of the Hover parallax effect
 // Inline styles
-const parallaxEffect = {
+/* const parallaxEffect = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -53,48 +102,4 @@ const parallaxEffect = {
   background:
     // "repeating-linear-gradient(45deg, #015f01, #015f01 30px, #077407 30px, #077407 60px)",
     "linear-gradient(90deg, rgba(131,58,180,0.9) 0%, rgba(253,160,29,0.9) 50%, rgba(252,69,69,0.6) 100%)",
-};
-
-const AboutServiceTilt = () => {
-  const bgGradient = "";
-
-  const [isHovered, setIsHovered] = useState(false);
-  return (
-    <motion.div
-      variants={showVariants}
-      className="sm:w-[240px] w-[80%] mx-auto p-[2px] rounded-[20px] shadow-card bg-opacity-50"
-    >
-      <Tilt
-        // className="parallax-effect"
-        perspective={500}
-        glareEnable={true}
-        glareMaxOpacity={0.45}
-        glareBorderRadius="18px"
-        scale={1.2}
-        gyroscope={true}
-        // style={parallaxEffect}
-        className={`flex flex-wrap h-[180px] rounded-2xl
-        shadow-lg
-          preserve-3d
-        dialog-bg-gradient
-        `}
-      >
-        <motion.div
-          // motion mouse detect area
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          initial="rest"
-          animate={isHovered ? "popOut" : "rest"}
-          variants={popOutVariants}
-          className="w-full h-full flex flex-col justify-center items-center"
-        >
-          <div className="text-4xl text-shadow-lg">ICONS</div>
-          <div className="mt-2">Parallax Tilt</div>
-          <div>👀 samples</div>
-        </motion.div>
-      </Tilt>
-    </motion.div>
-  );
-};
-
-export default AboutServiceTilt;
+}; */

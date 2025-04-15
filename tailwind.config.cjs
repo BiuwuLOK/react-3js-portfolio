@@ -23,15 +23,19 @@ module.exports = {
         "black-200": "#090325",
         "white-100": "#f3f3f3",
       },
+      borderColor: (theme) => ({
+        ...theme("colors"), // inhert all colors from theme
+      }),
+      backgroundImage: {
+        "hero-pattern": "url('/src/assets/herobg.png')",
+      },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
       },
       screens: {
         xs: "450px",
       },
-      backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
-      },
+
       textShadow: {
         sm: "0 1px 2px rgba(0, 0, 0, 0.5)",
         DEFAULT: "0 2px 4px rgba(0, 0, 0, 0.5)",

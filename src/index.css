@@ -114,9 +114,39 @@
   -webkit-text-fill-color: transparent;
 }
 
-.dialog-bg-gradient {
-  background-image: linear-gradient(to right, #9a5177, #f07cff, #f07cff);
+.bg-dialog-gradient {
+  background-image: linear-gradient(to right, #9a5177, #f07cff, #f0aef8);
   box-shadow: 0 0 15px 5px rgba(48, 35, 62, 0.5);
+}
+
+.bd-dialog-gradient {
+  position: relative;
+  border-radius: 1rem; /* Rounded corners */
+  background: #151030; /* Background color */
+  z-index: 0; /* Ensure content is above the pseudo-element */
+}
+
+.bd-dialog-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1rem; /* Rounded corners, same as parent */
+  padding: 2px; /* Border width */
+  background: linear-gradient(
+    to bottom,
+    #44e1fd,
+    #ffffff,
+    #f07cff,
+    #f0aef8
+  ); /* Gradient color */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1; /* Place pseudo-element below the content */
 }
 
 /* canvas- styles */

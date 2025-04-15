@@ -8,9 +8,9 @@ function UseDviceSize() {
 
   useEffect(() => {
     // set the query check screen width
-    const mobileQuery = window.matchMedia("(max-width: 642.5px)");
+    const mobileQuery = window.matchMedia("(max-width: 644px)");
     const tabletQuery = window.matchMedia(
-      "(min-width: 642.5px) and (max-width: 1080px)"
+      "(min-width: 744px) and (max-width: 1080px)"
     );
 
     // when matches = True, else = false (default as false)

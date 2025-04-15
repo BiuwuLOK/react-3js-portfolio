@@ -28,8 +28,8 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
           <p className=" text-white text-[18px] font-bold cursor-pointer">
-            Maximilian.r.Lok
-            <span className="sm:block hidden">| FullStack | Data Science</span>
+            Maximilian.LOK
+            <span className="sm:block hidden">| Full-Stack | Data Science</span>
           </p>
         </Link>
 

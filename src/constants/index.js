@@ -1,8 +1,4 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
   typescript,
   html,
@@ -25,6 +21,15 @@ import {
   threejs,
 } from "../assets";
 
+import {
+  fullstack,
+  laptop,
+  dataread,
+  datacenter,
+  cloudservices,
+  infrastructure,
+} from "../assets";
+
 export const navLinks = [
   {
     id: "about",
@@ -43,27 +48,27 @@ export const navLinks = [
 const services = [
   {
     title: "Full Stack",
-    icon: web,
+    icon: fullstack,
   },
   {
-    title: "Programming",
-    icon: mobile,
+    title: "Cross Platform",
+    icon: laptop,
   },
   {
     title: "Database",
-    icon: creator,
+    icon: "dataread",
   },
   {
     title: "DevOps",
-    icon: creator,
+    icon: "datacenter",
   },
   {
-    title: "Workflow",
-    icon: creator,
+    title: "CloudServices",
+    icon: cloudservices,
   },
   {
     title: "Infrastructure",
-    icon: creator,
+    icon: infrastructure,
   },
 ];
 

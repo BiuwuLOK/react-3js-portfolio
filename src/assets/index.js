@@ -1,10 +1,13 @@
 import logo from "./logo.svg";
 import logoAdj from "./logoAdj.svg";
 
+/* 
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
+*/
+
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -28,20 +31,23 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import carrent from "./web-pages/carrent.png";
+import jobit from "./web-pages/jobit.png";
+import tripguide from "./web-pages/tripguide.png";
 
 // customs
 import mouse from "./mouse.svg";
 
+import fullstack from "./lotties/fullstack.lottie";
+import laptop from "./lotties/laptop.lottie";
+import dataread from "./lotties/dataread.lottie";
+import datacenter from "./lotties/datacenter.lottie";
+import cloudservices from "./lotties/cloudservices.lottie";
+import infrastructure from "./lotties/infrastructure.lottie";
+
 export {
   logo,
   logoAdj,
-  backend,
-  creator,
-  mobile,
-  web,
   github,
   menu,
   close,
@@ -66,4 +72,10 @@ export {
   jobit,
   tripguide,
   mouse,
+  fullstack,
+  laptop,
+  dataread,
+  datacenter,
+  cloudservices,
+  infrastructure,
 };
