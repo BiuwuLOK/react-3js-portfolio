@@ -7,5 +7,5 @@ export default defineConfig({
     { enforce: "pre", ...mdx() },
     react({ include: /\.(mdx|js|jsx|ts|tsx)$/ }),
   ],
-  assetsInclude: ["**/*.lottie"], // 添加對 .lottie 文件的支持
+  assetsInclude: ["**/*.lottie"], // Ensure .lottie files are treated as assets
 });
