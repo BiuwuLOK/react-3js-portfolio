@@ -42,7 +42,7 @@ const popOutVariants = {
 };
 
 const AboutServiceTilt = ({ icon, title, content }) => {
-  // const lottieRef = useRef(null);
+  /* const lottieRef = useRef(null); */
 
   useEffect(() => {
     if (lottieRef.current) {
@@ -72,7 +72,7 @@ const AboutServiceTilt = ({ icon, title, content }) => {
           className="w-full h-full flex flex-col justify-evenly items-center py-5"
         >
           <DotLottieReact
-            // lottieRef={lottieRef}
+            /* lottieRef={lottieRef} */
             renderConfig={Svg}
             src={icon}
             alt={title}
