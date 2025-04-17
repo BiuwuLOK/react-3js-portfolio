@@ -42,7 +42,7 @@ const popOutVariants = {
 };
 
 const AboutServiceTilt = ({ icon, title, content }) => {
-  /* const lottieRef = useRef(null); */
+  const lottieRef = useRef(null);
 
   useEffect(() => {
     if (lottieRef.current) {
