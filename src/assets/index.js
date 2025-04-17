@@ -44,6 +44,8 @@ import dataread from "./lotties/dataread.lottie";
 import datacenter from "./lotties/datacenter.lottie";
 import cloudservices from "./lotties/cloudservices.lottie";
 import infrastructure from "./lotties/infrastructure.lottie";
+import popupfullstack from "./lotties/popupfullstack.lottie";
+import overfullstack from "./lotties/overfullstack.lottie";
 
 export {
   logo,
@@ -78,4 +80,6 @@ export {
   datacenter,
   cloudservices,
   infrastructure,
+  popupfullstack,
+  overfullstack,
 };

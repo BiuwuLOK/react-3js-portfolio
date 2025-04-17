@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useRef } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { Svg } from "@react-three/drei";
 
 // Stages for the fade-in effect
 // Variants for the fade-in effect
@@ -28,25 +27,33 @@ const showVariants = {
 const popOutVariants = {
   rest: {
     z: 0,
+    scale: 1,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
     },
   },
   popOut: {
     z: 80,
-    scale: 1.2,
+    scale: 1.12,
     transition: {
-      duration: 0.6,
+      duration: 0.4,
     },
   },
 };
 
-const AboutServiceTilt = ({ title, icon }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const AboutServiceTilt = ({ icon, title, content }) => {
+  // const lottieRef = useRef(null);
+
+  useEffect(() => {
+    if (lottieRef.current) {
+      console.log("Renderer:", lottieRef.current.getRendererType()); // Debug renderer
+    }
+  }, []);
+
   return (
     <motion.div
       variants={showVariants}
-      className="w-[90%] lg:w-[440px] sm:w-[320px] mx-auto p-[2px] rounded-[20px] shadow-card bg-opacity-50"
+      className="w-[90%] lg:w-[440px] sm:w-[320px] mx-auto p-[8px] rounded-[20px] shadow-card bg-opacity-50"
     >
       <Tilt
         perspective={500}
@@ -55,28 +62,29 @@ const AboutServiceTilt = ({ title, icon }) => {
         glareBorderRadius="18px"
         scale={1.1}
         gyroscope={true}
-        className={`flex flex-wra2222p h-[240px] rounded-2xl shadow-lg preserve-3d bg-tertiary border-2 bd-dialog-gradient`}
+        className={`flex flex-wrap h-[240px] rounded-2xl shadow-lg preserve-3d bg-tertiary border-2 bd-dialog-gradient`}
       >
         <motion.div
-          // motion mouse detect area
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
           initial="rest"
-          animate={isHovered ? "popOut" : "rest"}
+          animate="rest"
+          whileHover="popOut"
           variants={popOutVariants}
           className="w-full h-full flex flex-col justify-evenly items-center py-5"
         >
           <DotLottieReact
+            // lottieRef={lottieRef}
+            renderConfig={Svg}
             src={icon}
             alt={title}
             autoplay
-            loop
-            className="w-16 h-16 object-contain"
+            loop // Enable if needed
+            speed={0.9} // Lower speed for less CPU usage
+            className="w-32 h-32 object-contain"
           />
           <h3 className="text-white text-[20px] font-bold text-center mt-4">
             {title}
           </h3>
-          <p>Lipsom asldkfjsalkdflsakdjflkj</p>
+          <p className="text-white text-center">{content}</p>
         </motion.div>
       </Tilt>
     </motion.div>

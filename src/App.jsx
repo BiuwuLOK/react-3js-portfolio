@@ -35,9 +35,9 @@ const App = () => {
            */}{" "}
           <StarsCanvas />
         </div>
-        {/*         <div>
+        <div>
           <LottieViewer />
-        </div> */}
+        </div>
       </div>
     </BrowserRouter>
   );

@@ -28,6 +28,8 @@ import {
   datacenter,
   cloudservices,
   infrastructure,
+  popupfullstack,
+  overfullstack,
 } from "../assets";
 
 export const navLinks = [
@@ -47,28 +49,25 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Full Stack",
-    icon: fullstack,
-  },
-  {
     title: "Cross Platform",
-    icon: laptop,
+    icon: overfullstack,
+    content: "From Static to AI-Powered",
   },
   {
-    title: "Database",
-    icon: "dataread",
-  },
-  {
-    title: "DevOps",
-    icon: "datacenter",
-  },
-  {
-    title: "CloudServices",
+    title: "Cloud Services",
     icon: cloudservices,
+    content: "Develope once Deploy anywhere",
   },
   {
-    title: "Infrastructure",
+    title: "Data Analytics",
+    icon: dataread,
+    content: "Intelligence and Automation",
+  },
+
+  {
+    title: "Enterprises",
     icon: infrastructure,
+    content: "Hyberconverged",
   },
 ];
 
