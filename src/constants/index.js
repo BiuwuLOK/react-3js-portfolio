@@ -11,25 +11,26 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
+  // starbucks,
+  // tesla,
   shopify,
   carrent,
   jobit,
   tripguide,
   threejs,
+  apple,
+  aws,
+  google,
+  openai,
 } from "../assets";
 
 import {
-  fullstack,
   laptop,
-  dataread,
   datacenter,
+  dataread,
   cloudservices,
   infrastructure,
-  popupfullstack,
-  overfullstack,
+  crossfullstack,
 } from "../assets";
 
 export const navLinks = [
@@ -50,12 +51,12 @@ export const navLinks = [
 const services = [
   {
     title: "Cross Platform",
-    icon: overfullstack,
+    icon: crossfullstack,
     content: "From Static to AI-Powered",
   },
   {
     title: "Cloud Services",
-    icon: cloudservices,
+    icon: cloudservices, // This should now be a React component, not a string
     content: "Develope once Deploy anywhere",
   },
   {
@@ -128,11 +129,11 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "System Developer",
+    company_name: "Company A",
+    icon: apple,
+    iconBg: "#FFF",
+    date: "March 2024 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -141,11 +142,11 @@ const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Cross Platform Developer",
+    company_name: "Company B",
+    icon: shopify,
+    iconBg: "#383E56",
+    date: "Jan 2023 - Feb 2024",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -156,9 +157,9 @@ const experiences = [
   {
     title: "Web Developer",
     company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    icon: aws,
+    iconBg: "#FFF",
+    date: "Oct 2021 - Jan 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -168,10 +169,10 @@ const experiences = [
   },
   {
     title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    company_name: "aws",
+    icon: google,
+    iconBg: "#383E56",
+    date: "Jan 2020 - Oct 2021",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",

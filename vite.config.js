@@ -8,4 +8,7 @@ export default defineConfig({
     react({ include: /\.(mdx|js|jsx|ts|tsx)$/ }),
   ],
   assetsInclude: ["**/*.lottie"], // Ensure .lottie files are treated as assets
+  build: {
+    // sourcemap: true, // 禁用 Source Map 生成
+  },
 });

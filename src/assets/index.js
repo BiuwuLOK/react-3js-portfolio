@@ -26,26 +26,27 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-
 import carrent from "./web-pages/carrent.png";
 import jobit from "./web-pages/jobit.png";
 import tripguide from "./web-pages/tripguide.png";
 
-// customs
+// customs icons
 import mouse from "./mouse.svg";
-
+// custom lotties
 import fullstack from "./lotties/fullstack.lottie";
 import laptop from "./lotties/laptop.lottie";
 import dataread from "./lotties/dataread.lottie";
 import datacenter from "./lotties/datacenter.lottie";
-import cloudservices from "./lotties/cloudservices.lottie";
 import infrastructure from "./lotties/infrastructure.lottie";
 import popupfullstack from "./lotties/popupfullstack.lottie";
-import overfullstack from "./lotties/overfullstack.lottie";
+import crossfullstack from "./lotties/crossfullstack.lottie";
+import cloudservices from "./lotties/cloudservicesicon.jsx";
+// custom logos
+import shopify from "./company/shopify.png";
+import apple from "./company/apple-black-logo.svg";
+import aws from "./company/aws-logomark.svg";
+import google from "./company/google-icon-logo.svg";
+import openai from "./company/openai-logomark.svg";
 
 export {
   logo,
@@ -66,20 +67,23 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
   carrent,
   jobit,
   tripguide,
   mouse,
+  // custom lotties
   fullstack,
   laptop,
   dataread,
   datacenter,
-  cloudservices,
   infrastructure,
   popupfullstack,
-  overfullstack,
+  crossfullstack,
+  cloudservices,
+  // company logos
+  shopify,
+  apple,
+  aws,
+  google,
+  openai,
 };
