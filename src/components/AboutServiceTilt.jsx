@@ -5,22 +5,9 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { Svg } from "@react-three/drei";
 
 // Stages for the fade-in effect
-// Variants for the fade-in effect
 const showVariants = {
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    y: 50,
-    transition: {
-      duration: 0.8,
-    },
-  },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: 50, transition: { duration: 0.8 } },
 };
 
 // Variants for the 3D "pop-out" effect
@@ -28,16 +15,12 @@ const popOutVariants = {
   rest: {
     z: 0,
     scale: 1,
-    transition: {
-      duration: 0.4,
-    },
+    transition: { duration: 0.6 },
   },
   popOut: {
     z: 80,
     scale: 1.12,
-    transition: {
-      duration: 0.4,
-    },
+    transition: { duration: 0.4 },
   },
 };
 
@@ -51,11 +34,11 @@ const AboutServiceTilt = ({ icon, title, content }) => {
   }, []);
 
   return (
-    <motion.div
+    <motion.div // Animate the card appearance
       variants={showVariants}
       className="w-[90%] lg:w-[440px] sm:w-[320px] mx-auto p-[8px] rounded-[20px] shadow-card bg-opacity-50"
     >
-      <Tilt
+      <Tilt // Parallax tilt effect
         perspective={500}
         glareEnable={true}
         glareMaxOpacity={0.45}
@@ -64,16 +47,16 @@ const AboutServiceTilt = ({ icon, title, content }) => {
         gyroscope={true}
         className={`flex flex-wrap h-[240px] rounded-2xl shadow-lg preserve-3d bg-tertiary border-2 bd-dialog-gradient`}
       >
-        <motion.div
+        <motion.div // Apply the pop-out effect
           initial="rest"
           animate="rest"
           whileHover="popOut"
           variants={popOutVariants}
           className="w-full h-full flex flex-col justify-evenly items-center py-5"
         >
-          <DotLottieReact
+          <DotLottieReact // Lottie animation component
             /* lottieRef={lottieRef} */
-            renderConfig={Svg}
+            renderConfig={Svg} // Trying use Svg for svg rendering
             src={icon}
             alt={title}
             autoplay
