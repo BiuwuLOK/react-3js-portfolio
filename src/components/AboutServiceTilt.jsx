@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import { Svg } from "@react-three/drei";
 
 // Stages for the fade-in effect
 const showVariants = {
@@ -19,10 +18,12 @@ const popOutVariants = {
   },
   popOut: {
     z: 80,
-    scale: 1.12,
+    scale: 1.15,
     transition: { duration: 0.4 },
   },
 };
+
+//
 
 const AboutServiceTilt = ({ icon, title, content }) => {
   const lottieRef = useRef(null);
@@ -36,16 +37,16 @@ const AboutServiceTilt = ({ icon, title, content }) => {
   return (
     <motion.div // Animate the card appearance
       variants={showVariants}
-      className="w-[90%] lg:w-[440px] sm:w-[320px] mx-auto p-[8px] rounded-[20px] shadow-card bg-opacity-50"
+      className="w-[90%] md:w-[360px] lg:w-[440px] rounded-[20px] shadow-card bg-opacity-50 p-[8px] mx-auto my-4 lg:my-10"
     >
       <Tilt // Parallax tilt effect
-        perspective={500}
+        perspective={700}
         glareEnable={true}
         glareMaxOpacity={0.45}
         glareBorderRadius="18px"
-        scale={1.1}
-        gyroscope={true}
-        className={`flex flex-wrap h-[240px] rounded-2xl shadow-lg preserve-3d bg-tertiary border-2 bd-dialog-gradient`}
+        scale={1.02}
+        gyroscope={false}
+        className={`flex flex-wrap h-[360px] rounded-2xl shadow-lg preserve-3d bg-tertiary border-2 bd-dialog-gradient`}
       >
         <motion.div // Apply the pop-out effect
           initial="rest"
@@ -56,7 +57,8 @@ const AboutServiceTilt = ({ icon, title, content }) => {
         >
           <DotLottieReact // Lottie animation component
             /* lottieRef={lottieRef} */
-            renderConfig={Svg} // Trying use Svg for svg rendering
+            renderer="svg"
+            renderConfig={"svg"} // Trying use Svg for svg rendering
             src={icon}
             alt={title}
             autoplay
@@ -64,7 +66,7 @@ const AboutServiceTilt = ({ icon, title, content }) => {
             speed={0.9} // Lower speed for less CPU usage
             className="w-32 h-32 object-contain"
           />
-          <h3 className="text-white text-[20px] font-bold text-center mt-4">
+          <h3 className="text-white text-[2rem] font-bold text-center">
             {title}
           </h3>
           <p className="text-white text-center">{content}</p>

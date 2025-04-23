@@ -22,15 +22,17 @@ import {
   aws,
   google,
   openai,
+  fullstack,
 } from "../assets";
 
 import {
+  // custom svg or lotties
   laptop,
+  crossPCs,
   datacenter,
-  dataread,
+  datapopup,
   cloudservices,
   infrastructure,
-  crossfullstack,
 } from "../assets";
 
 export const navLinks = [
@@ -51,7 +53,7 @@ export const navLinks = [
 const services = [
   {
     title: "Cross Platform",
-    icon: crossfullstack,
+    icon: crossPCs,
     content: "From Static to AI-Powered",
   },
   {
@@ -61,7 +63,7 @@ const services = [
   },
   {
     title: "Data Analytics",
-    icon: dataread,
+    icon: datapopup,
     content: "Intelligence and Automation",
   },
 

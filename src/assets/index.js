@@ -35,12 +35,12 @@ import mouse from "./mouse.svg";
 // custom lotties
 import fullstack from "./lotties/fullstack.lottie";
 import laptop from "./lotties/laptop.lottie";
-import dataread from "./lotties/dataread.lottie";
+import datapopup from "./lotties/datapopup.lottie";
 import datacenter from "./lotties/datacenter.lottie";
 import infrastructure from "./lotties/infrastructure.lottie";
 import popupfullstack from "./lotties/popupfullstack.lottie";
-import crossfullstack from "./lotties/crossfullstack.lottie";
-import cloudservices from "./lotties/cloudservicesicon.jsx";
+import crossPCs from "./lotties/crossPCs.lottie";
+import cloudservices from "./lotties/cloudservices.lottie";
 // custom logos
 import shopify from "./company/shopify.png";
 import apple from "./company/apple-black-logo.svg";
@@ -74,11 +74,12 @@ export {
   // custom lotties
   fullstack,
   laptop,
-  dataread,
+  crossPCs,
+  datapopup,
   datacenter,
   infrastructure,
   popupfullstack,
-  crossfullstack,
+  // React SVGs
   cloudservices,
   // company logos
   shopify,
