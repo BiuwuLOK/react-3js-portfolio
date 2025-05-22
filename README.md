@@ -1,5 +1,3 @@
-Here’s a comprehensive README draft for your project, focusing on the core source code and highlighting your custom design and dotLottie features in the Hero and About sections:
-
 ---
 
 # React 3JS Portfolio
