@@ -31,7 +31,7 @@ A modern, interactive portfolio built with **React**, **Vite**, and **Three.js**
 
 ## Demo
 
-> (Add a link or GIF/screenshot here if you have a live demo!)
+> (Waitting the .gif)
 
 ---
 
