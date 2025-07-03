@@ -8,6 +8,7 @@ import UseDviceSize from "./usehooks/UseDviceSize";
 // import useHooks, params for desktopCanvas
 
 import DesktopCanvas from "./canvas/Desktop";
+import VendingCanvas from "./canvas/Vending";
 import HeroIcons from "./HeroIcons";
 
 import { isMobileSafari } from "react-device-detect";
@@ -52,7 +53,7 @@ const Hero = () => {
        this part can rotate or holding-move when users touch
        but limit by the 3D object area
       */}
-      <DesktopCanvas
+      <VendingCanvas
         //
         isMobile={isMobile}
         isTablet={isTablet}
